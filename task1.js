@@ -4,7 +4,7 @@ function isPalindrom (string){
     string = string.split(' ').join('');
     // переисываем строку в обратную сторону
     let reverseString = string.split('').reverse().join('');
-    // console.log(string === reverseString);
+    console.log(string === reverseString);
 }
 
 // с помощью цикла
@@ -15,8 +15,9 @@ function isPalindrom1 (string){
     for (let i = string.length - 1; i >= 0; i--) {
         reverseString += string[i];
     }
-    // console.log(string === reverseString);
+    console.log(string === reverseString);
 }
 
 
-isPalindrom ("аргентина манит негра");
+// isPalindrom ("аргентина манит негра");
+// isPalindrom1 ("аргентина манит негра");

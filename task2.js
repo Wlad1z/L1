@@ -12,3 +12,6 @@ function isStrangeNumber (num){
     }
     console.log(num == sumDivisors ? true : false);
 }
+
+// isStrangeNumber(6);
+// isStrangeNumber(8);

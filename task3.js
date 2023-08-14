@@ -1,4 +1,3 @@
-
 const MathX = (function() {
     
     function isPrime(num) {
@@ -28,16 +27,16 @@ const MathX = (function() {
         },
         //вычисляем числа фибоначи до n-числа
         fibNumbers: function(n) {
-            const fibNumbers = [1]; 
-            let a = 0;
+            const fibNumbers = [1, 1]; 
+            let a = 1;
             let b = 1;
-            for (let i = 2; b <= n; i++) {
+            for (let i = 3; b <= n; i++) {
                 let c = a + b;
                 a = b;
                 b = c;
                 fibNumbers.push(b);
             }
-            fibNumbers.pop()// удаляем результат последней проверки, так как при ней b ещё будет меньше n, а в массив вносится уже большее
+            fibNumbers.pop()// удаляем результат последней проверки, так как при ней b ещё будет меньше n, а в массив вносится уже большее число
             return fibNumbers;
         },
         //вычисление n-го просто числа
@@ -70,3 +69,7 @@ const MathX = (function() {
     };
 })();
 
+// console.log(MathX.fibNumber(10))
+// console.log(MathX.fibNumbers(10))
+// console.log(MathX.primeNumber(10))
+// console.log(MathX.primeNumbers(10))
