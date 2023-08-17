@@ -1,4 +1,4 @@
-import { getDeclension } from './task4/functionTask4.js';
+import { getDeclension } from './task4/functionTask4';
 
     
 
