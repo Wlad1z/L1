@@ -5,7 +5,7 @@ const v = '5.131'; // Версия VK API
 
 async function getPosts() {
     try {
-        const response = await fetch(`/proxy/vk-proxy.php?owner_id=${ownerId}&count=${count}&access_token=${accessToken}&v=${v}`);
+        const response = await fetch(`/L1/task19/proxy/vk-proxy.php?owner_id=${ownerId}&count=${count}&access_token=${accessToken}&v=${v}`);
         const data = await response.json();
         return data.response.items;
     } catch (error) {
