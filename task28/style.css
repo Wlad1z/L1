@@ -1,0 +1,17 @@
+#red {
+    background: red;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 0;
+    transition: 3000ms;
+}
+.hide{
+    display: none;
+}
+.new-element *{
+    display:inline;
+}
+.new-element img{
+    height: 16px;
+}

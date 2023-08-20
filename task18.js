@@ -4,7 +4,7 @@ function calculateAvailableStorage() {
     let testData;
 
     try {
-        testData = 'a'.repeat(1024 * 1024); // 1 MB 
+        testData = 'a'.repeat(1024 * 8); // 8KB
         totalData = testData;
 
         while (true) {

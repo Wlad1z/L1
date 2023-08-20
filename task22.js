@@ -2,9 +2,8 @@ let recursionCount = 0;
 
 function recursiveWrite() {
     recursionCount++;
-    console.log(`Номер вызова: ${recursionCount} `);
-    document.write(`<br><script> recursiveWrite();</script>`);
-    
+    document.write(`Recursive Call ${recursionCount}<br>`);
+    recursiveWrite();
 }
 
 // recursiveWrite();
