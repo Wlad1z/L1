@@ -1,4 +1,4 @@
-import { formatDate, getCurrentDate } from './momentModule.js';
+// import { formatDate, getCurrentDate } from './momentModule.js';
 
 const myDate = new Date('2023-08-10');
 const formattedDate = formatDate(myDate);
