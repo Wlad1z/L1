@@ -5683,3 +5683,5 @@
     return hooks;
 
 })));
+
+export {moment}

@@ -1,4 +1,4 @@
-import "https://wlad1z.github.io/L1//module/moment.js"; // Укажите правильный путь к moment.js
+import { moment } from "https://wlad1z.github.io/L1//module/moment.js"; // Укажите правильный путь к moment.js
 
 // Функция форматирования заданной даты
 function formatDate(date) {
