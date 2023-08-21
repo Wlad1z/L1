@@ -1,4 +1,4 @@
-import "./path/to/moment.js"; // Укажите правильный путь к moment.js
+import "./module/moment.js"; // Укажите правильный путь к moment.js
 
 // Функция форматирования заданной даты
 function formatDate(date) {
