@@ -1,3 +1,4 @@
+import "./path/to/moment.js"; // Укажите правильный путь к moment.js
 
 // Функция форматирования заданной даты
 function formatDate(date) {
@@ -9,3 +10,4 @@ function getCurrentDate() {
     return moment().format('DD-MM-YYYY');
 }
 
+export { formatDate, getCurrentDate };
