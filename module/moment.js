@@ -5684,4 +5684,3 @@
 
 })));
 
-export default moment;

@@ -15,4 +15,4 @@ function getDeclension(number, words) {
     
     return `${number} ${word}`;
 }
-export {getDeclension};
+export {getDeclension}
