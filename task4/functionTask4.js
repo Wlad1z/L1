@@ -1,4 +1,4 @@
-export function getDeclension(number, words) {
+function getDeclension(number, words) {
     const cases = [2, 0, 1, 1, 1, 2]; //массив с соответствующими формами слова
     
     let wordIndex;
