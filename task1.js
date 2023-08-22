@@ -1,3 +1,5 @@
+import { createSimpleElement } from "./module/createSimpleElement";
+
 // с помощью reverse
 function isPalindrom (string){
     //удаляем пробелы
@@ -18,6 +20,7 @@ function isPalindrom1 (string){
     console.log(string === reverseString);
 }
 
-
 // isPalindrom ("аргентина манит негра");
 // isPalindrom1 ("аргентина манит негра");
+
+createSimpleElement('Задание 1', isPalindrom ("аргентина манит негра")+"- это палиндром");

@@ -1,4 +1,4 @@
-import {getDeclension} from "./functionTask4.js"
+import {getDeclension} from "../module/functionTask4.js"
 
 const number = 12454;
 const words = ["сообщение", "сообщения", "сообщений"];
