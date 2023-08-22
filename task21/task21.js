@@ -37,4 +37,6 @@ try {
 
 
 //считаем стекк по первой функции
-// console.log("Размер стека браузера: " + Math .round(stackSize1*(stackSize2*16/(stackSize1 - stackSize2)+0*8)) + " байт")
+let stackSize = Math .round(stackSize1*(stackSize2*16/(stackSize1 - stackSize2)+0*8)) + " байт";
+createSimpleElement('Задание 21',`Размер стека: ${stackSize}`);
+

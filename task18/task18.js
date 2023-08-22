@@ -1,4 +1,5 @@
 function calculateAvailableStorage() {
+    localStorage.clear();
     // переменные для хранения данных
     let totalData; 
     let testData;
@@ -16,11 +17,12 @@ function calculateAvailableStorage() {
         if (error.name === 'QuotaExceededError') {
             //выводим размер хранилища
             const currentDataSize = (totalData.length - testData.length) / (1024 * 1024);
-            console.log(`Максимальный размер localStorage : ${currentDataSize.toFixed(2)} MB`);
+            createSimpleElement("", (`Максимальный размер localStorage : ${currentDataSize.toFixed(2)} MB`));
+            localStorage.clear();
         } else {
             console.error('Error:', error);
         }
     }
 }
 
-// calculateAvailableStorage();
+calculateAvailableStorage();
