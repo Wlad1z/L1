@@ -1,8 +1,10 @@
 import {getDeclension} from "../module/functionTask4.js"
 import {createSimpleElement} from "../module/createSimpleElement.js"
 
-const number = 12454;
-const words = ["сообщение", "сообщения", "сообщений"];
-const result = getDeclension(number, words);
 
-createSimpleElement('Задание 4', result);
+const words = ["сообщение", "сообщения", "сообщений"];
+const result = getDeclension(12345, words);
+const result1 = getDeclension(123, words);
+const result2 = getDeclension(1, words);
+
+createSimpleElement('Задание 4', (result+"<br>"+result1+"<br>"+result2));
