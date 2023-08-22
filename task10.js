@@ -66,7 +66,7 @@ function parseNumber(str) {
     return Number(str);
 }
   
-
-// console.log(stringToJSON('["apple","24","true"]'));
-// console.log(stringToJSON('{"name": "John", "age": "30", "isStudent": "false"}'));
+createSimpleElement('Задание 10', 'Cтрока ["apple","24","true"] выведена в консоль' + '<br>' + 'Cтрока {"name": "John", "age": "30", "isStudent": "false"} выведена в консоль')
+console.log(stringToJSON('["apple","24","true"]'));
+console.log(stringToJSON('{"name": "John", "age": "30", "isStudent": "false"}'));
 

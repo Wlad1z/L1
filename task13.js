@@ -36,11 +36,11 @@ class Circle extends Shape {
     }
 
     calculateArea() {
-        return Math.PI * this.radius ** 2;
+        return Math.ceil(Math.PI * this.radius ** 2);
     }
 
     calculatePerimeter() {
-        return 2 * Math.PI * this.radius;
+        return Math.ceil(2 * Math.PI * this.radius);
     }
 }
 
@@ -63,10 +63,19 @@ class Triangle extends Shape {
 }
 
 const triangle = new Triangle(3, 4, 5, 2.4);
+const circle = new Circle(5);
 
 // Вызываем методы для расчета площади и периметра
-const area = triangle.calculateArea();
-const perimeter = triangle.calculatePerimeter();
+let area = triangle.calculateArea();
+let perimeter = triangle.calculatePerimeter();
+createSimpleElement('Задание 13', ("Площадь треугольника: " + area));
+createSimpleElement('', ("Периметр треугольника: " + perimeter))
+
+area = circle.calculateArea();
+perimeter = circle.calculatePerimeter(); 
+createSimpleElement('', ("Площадь круга: " + area));
+createSimpleElement('', ("Периметр круга: " + perimeter));
+
 
 // console.log("Площадь треугольника:", area);
 // console.log("Периметр треугольника:", perimeter);

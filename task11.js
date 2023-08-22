@@ -3,7 +3,7 @@ function createCounter() {
     
     function increment() {
         count++;
-        console.log(count);
+        return count;
     }
     
     return increment;
@@ -11,6 +11,4 @@ function createCounter() {
 
 const counter = createCounter(); // объявляем внутреннюю функцию
 
-// counter(); 
-// counter();
-// counter(); 
+createSimpleElement('Задание 11', (counter() + '<br>' + counter() + '<br>'+ counter() + '<br>'))

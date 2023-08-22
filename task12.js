@@ -28,6 +28,6 @@ const book = {
     }
 };
 
-// console.log("Оригинальное название:", book.getTitle());
-// book.setTitle("Великий Гетсби");
-// console.log("Русское название:", book.getTitle());
+createSimpleElement('Задание 12', ("Оригинальное название: " + book.getTitle()))
+book.setTitle("Великий Гетсби");
+createSimpleElement('', ("Русское название: " + book.getTitle()))

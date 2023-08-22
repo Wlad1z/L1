@@ -20,5 +20,5 @@ const functions8 = [
 //присваиваем имя новой функции
 const results = functionsAndResults(functions8);
 
-//вызываем её
-// console.log(results()); 
+
+createSimpleElement('Задание 8', "Результаты функций -" + results())

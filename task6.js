@@ -25,16 +25,17 @@ const users = [
     },
     {
         name: "Ann",
-        age: 8
+        age: 14
     },
     
 ]
 
-users.sort((a, b) => {
+const sort = users.sort((a, b) => {
     if (a.age === b.age) {
       return a.name.localeCompare(b.name); // сортировка по алфавиту
     }
     return a.age - b.age; // сортировка по возрастанию возраста
-  });
+});
   
-// console.log(users);
+createSimpleElement('Задание 6', ("Отсортированный список - " + JSON.stringify(sort) + " выведен в консоль"));
+console.log(sort);

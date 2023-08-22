@@ -23,5 +23,5 @@ const obj = { name: "John", age: 30, city: "New York" };
 const jsonString = jsonToString(obj);
 
 
-// console.log(jsonString);
+createSimpleElement('Задание 9', jsonString)
 

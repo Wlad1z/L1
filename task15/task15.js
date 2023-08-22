@@ -7,21 +7,21 @@ async function asyncFunction() {
 async function operation1() {
     return new Promise(resolve => setTimeout(() =>{ 
         resolve(5);
-        console.log("Function 1");
+        createSimpleElement('', "Функция 1" );
     }, 1000));
 }
 
 async function operation2() {
     return new Promise(resolve => setTimeout(() =>{                     
         resolve(5);
-        console.log("Function 2");
+        createSimpleElement('', "Функция 2" );
     }, 1000));
 }
 
-// asyncFunction()
-//     .then(result => {
-//         console.log("Результат:", result);
-//     })
-//     .catch(error => {
-//         console.error("Ошибка:", error);
-//     });
+asyncFunction()
+    .then(result => {
+        createSimpleElement('', "Результаты функций -" + result);
+    })
+    .catch(error => {
+        console.error("Ошибка:", error);
+    });

@@ -22,10 +22,10 @@ function loadImage(url) {
 
 const imageUrl = 'https://mediaex.ru/wp-content/uploads/4/5/1/45119f284e141c703d755f5ba370a685.jpeg';
 //обрабатываем загрузку изображения
-// loadImage(imageUrl)
-//     .then(imageInfo => {
-//         console.log('Изображение загружено:', imageInfo);
-//     })
-//     .catch(error => {
-//         console.error('Ошибка:', error);
-//     });
+loadImage(imageUrl)
+    .then(imageInfo => {
+        createSimpleElement('', ('Изображение загружено:'+ JSON.stringify(imageInfo))+`<img src="${imageInfo.url}" alt="">`);
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+    });
