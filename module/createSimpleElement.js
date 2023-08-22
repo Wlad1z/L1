@@ -4,4 +4,3 @@ function createSimpleElement (task, text){
         <p>${text}</p>`
     document.body.appendChild(div);
 }
-export {createSimpleElement}

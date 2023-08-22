@@ -10,8 +10,11 @@ function isStrangeNumber (num){
             sumDivisors += i;
         }
     }
-    console.log(num == sumDivisors ? true : false);
+    if(num == sumDivisors){
+        return num + " - это странное число"
+    } else{
+        return num + " - это не странное число"
+    }
 }
 
-// isStrangeNumber(6);
-// isStrangeNumber(8);
+createSimpleElement('Задание 2', (isStrangeNumber(6)+"<br>"+isStrangeNumber(8)));

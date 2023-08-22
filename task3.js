@@ -23,7 +23,7 @@ const MathX = (function() {
                 a = b;
                 b = c;
             }
-            return b;
+            return b + ` - это ${n}-число Фибоначи`;
         },
         //вычисляем числа фибоначи до n-числа
         fibNumbers: function(n) {
@@ -37,7 +37,7 @@ const MathX = (function() {
                 fibNumbers.push(b);
             }
             fibNumbers.pop()// удаляем результат последней проверки, так как при ней b ещё будет меньше n, а в массив вносится уже большее число
-            return fibNumbers;
+            return fibNumbers + ` - это все числа Фибоначи до ${n}`;
         },
         //вычисление n-го просто числа
         primeNumber: function(n) {
@@ -54,7 +54,7 @@ const MathX = (function() {
                 num++;
             }
 
-            return num;
+            return num + ` - это простое ${n}-число ` ;
         },
         //вычисление простых чисел до n-числа
         primeNumbers: function (n){
@@ -64,12 +64,10 @@ const MathX = (function() {
                     primeNumbers.push(i);
                 }
             }
-            return primeNumbers;
+            return primeNumbers + ` - это все простые числа до ${n}`;
         }
     };
 })();
 
-// console.log(MathX.fibNumber(10))
-// console.log(MathX.fibNumbers(10))
-// console.log(MathX.primeNumber(10))
-// console.log(MathX.primeNumbers(10))
+createSimpleElement('Задание 3', (MathX.fibNumber(10)+"<br>"+MathX.fibNumbers(10)+"<br>"+MathX.primeNumber(10)+"<br>"+MathX.primeNumbers(10)));
+

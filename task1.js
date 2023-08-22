@@ -1,26 +1,31 @@
-import { createSimpleElement } from "./module/createSimpleElement";
-
 // с помощью reverse
 function isPalindrom (string){
     //удаляем пробелы
-    string = string.split(' ').join('');
+    let simpleString = string.split(' ').join('');
     // переисываем строку в обратную сторону
-    let reverseString = string.split('').reverse().join('');
-    console.log(string === reverseString);
-}
+    let reverseString = simpleString.split('').reverse().join('');
+    if(simpleString === reverseString){
+        return string + "- это палиндром";
+    } else {
+        return string + "- это не палиндром"
+    }
+} 
 
 // с помощью цикла
 function isPalindrom1 (string){
-    string = string.split(' ').join('');
+    let simpleString = string.split(' ').join('');
     // переисываем строку в обратную сторону
     let reverseString = '';
-    for (let i = string.length - 1; i >= 0; i--) {
-        reverseString += string[i];
+    for (let i = simpleString.length - 1; i >= 0; i--) {
+        reverseString += simpleString[i];
     }
-    console.log(string === reverseString);
+    if(simpleString === reverseString){
+        return string + "- это палиндром";
+    } else {
+        return string + "- это не палиндром"
+    }
 }
 
-// isPalindrom ("аргентина манит негра");
-// isPalindrom1 ("аргентина манит негра");
 
-createSimpleElement('Задание 1', isPalindrom ("аргентина манит негра")+"- это палиндром");
+
+createSimpleElement('Задание 1', (isPalindrom ("аргентина манит негра")+"<br>"+isPalindrom1 ("мяч мяч")));
