@@ -4,7 +4,7 @@ const v = '5.131'; // Версия VK API
 
 
 function calculateAvailableStorage() {
-    let cachedAvailableStorage;
+    let cachedAvailableStorage = localStorage.getItem('cachedAvailableStorage');
     if (cachedAvailableStorage !== null) {
         return cachedAvailableStorage; // Используем значение из глобальной переменной, если оно уже установлено
     }
@@ -13,7 +13,7 @@ function calculateAvailableStorage() {
     let testData;
 
     try {
-        testData = 'a'.repeat(1024 * 1024); // 8KB
+        testData = 'a'.repeat(1024 * 32); // 8KB
         totalData = testData;
 
         while (true) {
@@ -28,6 +28,7 @@ function calculateAvailableStorage() {
             currentDataSize = currentDataSize.toFixed(2);
             localStorage.clear();
             cachedAvailableStorage = currentDataSize;
+            localStorage.setItem('cachedAvailableStorage', cachedAvailableStorage);
             return currentDataSize;
         } else {
             console.error('Error:', error);
