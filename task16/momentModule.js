@@ -1,13 +1,10 @@
-// import "./path/to/moment.js"; // Укажите правильный путь к moment.js
-
-// Функция форматирования заданной даты
 function formatDate(date) {
-    return moment(date).format('MMMM Do YYYY, h:mm:ss a');
+    return window.moment(date).format('MMMM Do YYYY, h:mm:ss a');
 }
 
 // Функция получения текущей даты
 function getCurrentDate() {
-    return moment().format('DD-MM-YYYY');
+    return window.moment().format('DD-MM-YYYY');
 }
 
-// export { formatDate, getCurrentDate };
+export { formatDate, getCurrentDate };
