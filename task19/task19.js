@@ -13,7 +13,7 @@ function calculateAvailableStorage() {
     let testData;
 
     try {
-        testData = 'a'.repeat(1024 * 32); // 8KB
+        testData = 'a'.repeat(1024 * 64); // 8KB
         totalData = testData;
 
         while (true) {
@@ -38,7 +38,13 @@ function calculateAvailableStorage() {
 
 
 // Теперь используем availableStorageMB для определения максимального количества кэшированных постов
-let offset = 0;
+
+let offset = localStorage.getItem('offset');
+if (offset !== null) {
+    offset = localStorage.getItem('offset'); // Используем значение из глобальной переменной, если оно уже установлено
+} else {
+    offset = 0;
+}
 const postsContainer = document.getElementById('postsContainer');
 const MAX_CACHED_POSTS = calculateAvailableStorage()*10000; // Примерное количество кэшированных постов
 
@@ -52,15 +58,23 @@ function loadMorePosts() {
 
 function handleNewPosts(data) {
     const cachedData = JSON.parse(localStorage.getItem('cachedData')) || [];
-
     data.response.items.forEach(post => {
-        cachedData.push({
+        let cachedPost = {
             id: post.id,
-            text: post.text
-        });
-    });
+            text: post.text,
+            like: post.likes.count,
+            photo: false
+        };
+        
+        if (post.attachments && post.attachments.length > 0 && post.attachments[0].photo) {
+            const length = post.attachments[0].photo.sizes.length -1;
+            cachedPost.photo = post.attachments[0].photo.sizes[length].url;
+        }
 
-    offset += data.response.items.length;
+        cachedData.push(cachedPost);
+    });
+    offset = +offset + data.response.items.length;
+    localStorage.setItem('offset', offset);
 
     // Удаляем старые записи, чтобы не превысить лимит кэшированных данных
     while (cachedData.length > MAX_CACHED_POSTS) {
@@ -83,6 +97,8 @@ function displayCachedPosts(cachedData) {
         postDiv.innerHTML = `
             <h3>Post ID: ${post.id}</h3>
             <p>${post.text}</p>
+            ${post.photo ? `<div class="img"><img src="${post.photo}" alt=""></div>` : " "}
+            <p><img class="like" src="like-purpur.svg" alt="">${post.like}</p>
             <hr>
         `;
         postsContainer.appendChild(postDiv);

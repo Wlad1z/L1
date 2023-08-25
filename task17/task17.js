@@ -35,7 +35,6 @@ async function geocodeAddress(address) {
         );
         //получаем список адрессов
         const suggestions = response.data.suggestions;
-        console.log(response)
         
         //создаём список в html
         suggestionsList.innerHTML = '';

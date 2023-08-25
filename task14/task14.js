@@ -27,5 +27,5 @@ loadImage(imageUrl)
         createSimpleElement('', ('Изображение загружено:'+ JSON.stringify(imageInfo))+`<img src="${imageInfo.url}" alt="">`);
     })
     .catch(error => {
-        console.error('Ошибка:', error);
+        createSimpleElement('', ('Ошибка:'+ error));
     });

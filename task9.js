@@ -19,9 +19,10 @@ function jsonToString(data) {
 }
 
 
-const obj = { name: "John", age: 30, city: "New York" };
+const obj = { name: "John", age: 30, city: "New York", items: ["apple", 24, true, { name: "John", age: 30, items2: ["apple", 24, true]}], items2: ["apple", 24, true] };
+console.log(obj)
 const jsonString = jsonToString(obj);
 
 
-createSimpleElement('Задание 9', jsonString)
+createSimpleElement('Задание 9',"Объект из консоли - "+jsonString)
 
