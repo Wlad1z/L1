@@ -37,5 +37,5 @@ const sort = users.sort((a, b) => {
     return a.age - b.age; // сортировка по возрастанию возраста
 });
   
-createSimpleElement('Задание 6', ("Отсортированный список - " + JSON.stringify(sort) + " выведен в консоль"));
+createSimpleElement('Задание 6', ("Отсортированный список - " + JSON.stringify(users) + " выведен в консоль"));
 console.log(sort);
