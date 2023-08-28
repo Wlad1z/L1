@@ -16,7 +16,7 @@ function jsonp(data){
     const itemsPerPage = 50;
     let currentPage = 1;
     //создаём страницу в соотвествии с пагинацмей
-    const renderPage = (page) => {
+    function renderPage (page) {
         const start = (page - 1) * itemsPerPage;
         const end = start + itemsPerPage;
         const pageData = tableData.slice(start, end);
@@ -38,7 +38,7 @@ function jsonp(data){
         });
     };
     //обновляем пагинцию для текущей страницы
-    const updatePagination = () => {
+    function updatePagination () {
         const totalPages = Math.ceil(tableData.length / itemsPerPage);
     
         const pagination = document.getElementById('pagination');
@@ -68,7 +68,7 @@ function jsonp(data){
     const sortState = {}; // объект для хранения состояния сортировки
 
     //объявляем функции сортировки в соотвествии с текущей пагинацией
-    const sortTable = (column) => {
+    function sortTable (column) {
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
         const pageData = tableData.slice(start, end);
