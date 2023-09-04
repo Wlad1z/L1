@@ -1,5 +1,4 @@
 import {getDeclension} from "../module/functionTask4.js";
-import {createSimpleElement} from "../module/createSimpleElementExport.js";
 
 
 const words = ["сообщение", "сообщения", "сообщений"];

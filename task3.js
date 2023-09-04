@@ -69,5 +69,5 @@ const MathX = (function() {
     };
 })();
 
-createSimpleElement('Задание 3', (MathX.fibNumber(10)+"<br>"+MathX.fibNumbers(10)+"<br>"+MathX.primeNumber(10)+"<br>"+MathX.primeNumbers(10)));
+createSimpleElement('Задание 3', (MathX.fibNumber(10)+"<br>"+MathX.fibNumbers(20)+"<br>"+MathX.primeNumber(10)+"<br>"+MathX.primeNumbers(10)));
 

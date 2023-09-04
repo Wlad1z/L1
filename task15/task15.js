@@ -4,14 +4,14 @@ async function asyncFunction() {
     return result1 + result2;
 }
 
-async function operation1() {
+function operation1() {
     return new Promise(resolve => setTimeout(() =>{ 
         resolve(5);
         createSimpleElement('', "Функция 1" );
     }, 1000));
 }
 
-async function operation2() {
+function operation2() {
     return new Promise(resolve => setTimeout(() =>{                     
         resolve(5);
         createSimpleElement('', "Функция 2" );
